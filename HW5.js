@@ -19,6 +19,7 @@ switch (drinks) {
         break;
     default:
         alert(message = "Ви не обрали нічого з вище вказаного ");
+        break;
 }
 console.log(message);
 
@@ -79,6 +80,7 @@ if (day === "понеділок") {
 //         break;
 //     default:
 //         mes = "Ви не ввели день неділі";
+// break;
 // }
 console.log(mes);
 
@@ -125,6 +127,57 @@ switch (month) {
         mess = "зима";
         break;     
     default:
-        mess = "Ви не ввели правильний номер місяця"            
+        mess = "Ви не ввели правильний номер місяця"
+        break;            
 }
 console.log(mess);
+
+// Створіть змінну для зберігання назви кольору. 
+// Виводьте повідомлення відповідно до вибраного кольору: 
+// якщо "червоний" — "стоп", "зелений" — "йти", "жовтий" — "чекати".
+
+let colour = prompt("Оберіть колір зелений, червоний, жовтий").toLowerCase();
+let info = "";
+switch (colour) {
+    case "червоний":
+         info = "стоп";
+         break;  
+    case "зелений":
+         info = "йти";
+        break;
+    case "жовтий":
+         info = "чекати";
+        break; 
+    default:
+        info = "Ви не ввели потрібний колір";
+        break;
+}
+console.log(info);
+
+// Створіть змінні для зберігання двох чисел та оператора (як у списку select).
+//  Виконайте відповідну операцію та виведіть результат. 
+//  У випадку ділення на нуль — виведіть попередження.
+
+let a = Number(prompt("Введіть перше число"));
+let b = Number(prompt("Введіть друге число"));
+let operator = prompt("Оберіть / * + -");
+let result = Number("");
+if (operator === "/") {
+    if (b === 0) {
+     console.log("На нуль ділити не можна");
+    } else {
+        result = a / b;
+        console.log(result);
+    }
+} else if (operator === "*") {
+    result = a * b;
+    console.log(result);
+} else if (operator === "+") {
+    result = a + b;
+    console.log(result);
+} else if (operator === "-") {
+    result = a - b;
+    console.log(result);
+}  else {
+    console.log("Ви не ввели потрібний оператор");
+}
